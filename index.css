@@ -1,0 +1,243 @@
+body {
+    color: #56678750;
+    font-family:monospace; 
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family:fantasy;
+}
+
+.background-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    background-image: url("teste04.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8); /* Altere o valor do alfa (0.5) para ajustar a opacidade */
+    z-index: 0;
+}
+
+.logo {
+    margin-left: 25px;
+    width: 300px;
+    height: 250px;
+    z-index: 1;
+}
+
+.container-xl{
+    margin-top: -80px;
+}
+.table-responsive {
+    margin: 30px 0;
+    z-index: 1;
+}
+
+.table-wrapper {
+    min-width: 1000px;
+    background: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 25px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+}
+.table-title {
+    padding-bottom: 15px;
+    background-image: #ffff;
+    color: #fff;
+    padding: 16px 30px;
+    margin: -20px -25px 10px;
+    border-radius: 3px 3px 0 0;
+    
+}   
+
+.table-title h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+}
+.table-title .btn {
+   
+    float: right;
+    font-size: 13px;
+    background: #fff;
+    border: none;
+    min-width: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none !important;
+    margin-left: 10px;
+    
+}
+.table-title .btn:hover, .table-title .btn:focus {
+    color: #90e0ef;
+    background: #f2f2f2;
+    
+    
+}
+.col-sm-7{
+    margin-left: 550px;
+}
+.table-title .btn i {
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+}
+.table-title .btn span {
+    float: left;
+    margin-top: 2px;
+}
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+table.table tr th:first-child {
+    width: 60px;
+}
+table.table tr th:last-child {
+    width: 100px;
+}
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}	
+table.table td:last-child i {
+    opacity: 0.9;
+    font-size: 22px;
+    margin: 0 5px;
+}
+table.table td a {
+    font-weight: bold;
+    color: #566787;
+    display: inline-block;
+    text-decoration: none;
+}
+
+table.table td i {
+    font-size: 19px;
+}
+table.table .avatar {
+    width: 5%;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+.status {
+    font-size: 30px;
+    margin: 2px 2px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 10px;
+}
+
+
+.pagination {
+    float: right;
+    margin: 0 0 5px;
+}
+.pagination li a {
+    border: none;
+    font-size: 13px;
+    min-width: 30px;
+    min-height: 30px;
+    color: #999;
+    margin: 0 2px;
+    line-height: 30px;
+    border-radius: 2px !important;
+    text-align: center;
+    padding: 0 6px;
+}
+.pagination li a:hover {
+    color: #666;
+}	
+.pagination li.active a, .pagination li.active a.page-link {
+    background: #ade8f4;
+}
+.pagination li.active a:hover {        
+    background: #ade8f4;
+}
+.pagination li.disabled i {
+    color: #ccc;
+}
+.pagination li i {
+    font-size: 16px;
+    padding-top: 6px
+}
+.hint-text {
+    float: left;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* Estilo para cabeçalho da página */
+ header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilo para rodapé da página */
+
+footer {
+    text-align: center;
+    background-color: #ade8f4;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupar a largura total da tela */
+    font-family:fantasy
+
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc; /* Borda da tabela */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Borda das células */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo para cabeçalho da tabela */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para células de dados */
+td {
+    background-color: #fff;
+}
