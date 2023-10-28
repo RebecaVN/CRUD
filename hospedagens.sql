@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 6.0.0-dev
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 192.168.30.23
--- Tempo de geração: 24/10/2023 às 23:57
--- Versão do servidor: 8.0.18
--- Versão do PHP: 8.2.11
+-- Host: 127.0.0.1
+-- Tempo de geração: 28/10/2023 às 20:01
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,14 @@ CREATE TABLE `hospedagens` (
   `checkIn` varchar(20) DEFAULT NULL,
   `checkOut` varchar(20) DEFAULT NULL,
   `status` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `hospedagens`
+--
+
+INSERT INTO `hospedagens` (`id`, `nome`, `checkIn`, `checkOut`, `status`) VALUES
+(1, 'teste', '', '', '');
 
 --
 -- Índices para tabelas despejadas
@@ -53,7 +60,7 @@ ALTER TABLE `hospedagens`
 -- AUTO_INCREMENT de tabela `hospedagens`
 --
 ALTER TABLE `hospedagens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
