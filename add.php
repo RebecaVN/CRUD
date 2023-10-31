@@ -1,7 +1,11 @@
 <?php
+//incluindo o arquivo de configuração com as informações das conexões do banco de dados
 include 'config.php';
-
 // Verifica se os dados do formulário estão presentes
+//o POST é um método utilizado para enviar ddados para o servidor de forma que os dados não são visíveis na URL
+//isset é para verificar se uma variável está definida e não é nula.
+//STMT ->  para representar uma declaração preparada (prepared statement). Declarações preparadas são uma forma de executar consultas SQL de maneira mais segura
+//$conn -> varíavel usada p armazenar a conexão com o banco de dados em scripts
 if (
     isset($_POST['userName']) &&
     isset($_POST['checkIn']) &&
@@ -25,13 +29,13 @@ if (
     } else {
         $response = ['status' => 'error', 'message' => 'Erro ao salvar usuário: ' . $stmt->error];
     }
-
+//Fechamento da declaração preparada p poder liberar os recursos
     $stmt->close();
 } else {
     $response = ['status' => 'error', 'message' => 'Parâmetros inválidos.'];
 }
 
-// Envia a resposta como JSON
+// Envia a resposta como JSON, útil pq o script tá sendo chamado por meio de uma requisição AJAX
 header('Content-Type: application/json');
 echo json_encode($response);
 ?>

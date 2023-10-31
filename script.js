@@ -1,9 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-    let editingUserId = null;
-    const addUserButton = document.querySelector('#userModal .modal-body #btnSave');
-    const userForm = document.querySelector('#userModal .modal-body form');
-    const userList = document.querySelector('.table tbody');
+//código dentro da função anônima será executado assim que o DOM (Document Object Model) estiver completamente carregado
 
+//
+document.addEventListener('DOMContentLoaded', function () {
+    let editingUserId = null; //-> usada para rastrear o ID do usuário em edição
+    const addUserButton = document.querySelector('#userModal .modal-body #btnSave'); //->Representa o botão de salvar dentro do modal de usuário
+    const userForm = document.querySelector('#userModal .modal-body form'); // -> é o formulário dentro do modal
+    const userList = document.querySelector('.table tbody'); // -> tabela de usuários
+
+    //utilizando jQuery para realizar uma requisição AJAX para o servidor
+    //O servidor retorna dados de usuários, que são processados e adicionados à tabela de usuários
+    //A resposta é esperada ser um JSON que é convertido para um array de objetos JS
     function loadUsersFromDatabase() {
         $.ajax({
             url: 'get.php',
@@ -23,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
+    //adiciona ou atualiza uma linha na tabela de usuários com os dados fornecidos.
     function addUserToTable(id, nome, checkIn, checkOut, status) {
         const existingRow = userList.querySelector(`tr[data-id="${id}"]`);
 
@@ -51,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         newRow.querySelector('.settings').addEventListener('click', editUser);
         newRow.querySelector('.delete').addEventListener('click', deleteUser);
     }
-
+    //event listener -> reage ao clique no botão de adicionar usuário, coleta os dados do formulário, e realiza uma requisição AJAX para o servidor
     addUserButton.addEventListener('click', function () {
         const userId = userForm.querySelector('#userId').value;
         const formData = new FormData(userForm);
